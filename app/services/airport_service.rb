@@ -1,4 +1,4 @@
-class Airport 
+class AirportService 
 	API_URL = 'https://www.qantas.com.au/api/airports'
 	class << self
 		def filter(params)
@@ -20,7 +20,7 @@ class Airport
 		end
 
 		def cache_key(params)
-			"airports-#{params[:country_code]}-#{params[:international_airport]}-#{params[:regional_airport]}-#{params[:code]}-list"
+			"airports-#{params['country_code']}-#{params['international_airport']}-#{params['regional_airport']}-#{params['code']}-list"
 		end
 	end
 end
