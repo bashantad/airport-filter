@@ -1,24 +1,30 @@
-# README
+## Airport filter API installation
+Prerequisites: ruby 2.3.1 and rails 5.0.2
+	
+Install gem dependencies with Bundle:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    $ gem install bundler
+    $ bundle install
+    $ bundle exec rake db:create    
 
-Things you may want to cover:
+## Testing
+[![Build Status](https://travis-ci.org/bashantad/airport-filter.svg?branch=master)](https://travis-ci.org/bashantad/airport-filter)
 
-* Ruby version
+Code is tested using [RSpec](http://rspec.info/). Run the following command to run tests.
 
-* System dependencies
+    $ bundle exec rspec spec/
 
-* Configuration
 
-* Database creation
+## Usage
 
-* Database initialization
+Run the program from command line
 
-* How to run the test suite
+    $ rails server
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Then it can filter by following params
 
-* ...
+		code, country_code, international_airport, regional_airport
+
+
+Copyright (c) 2015 [Bashanta Dahal](https://github.com/bashantad)
