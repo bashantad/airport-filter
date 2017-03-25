@@ -1,0 +1,12 @@
+language: ruby
+
+before_install:
+  - gem install bundler
+  - bundle install
+  - psql -c 'create database api_app_test;' -U postgres
+services:
+  - postgresql
+rvm:
+  - 2.3.1
+
+script: bundle exec rspec spec/
